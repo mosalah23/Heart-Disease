@@ -1,0 +1,88 @@
+<! DOCTYPE html>
+
+<html>
+<style>
+    body{
+        background-color:#1c87c9;
+    }
+form {
+    margin: auto;
+    width: 35%;
+}
+.result {
+    margin: auto;
+    width: 35%;
+    border: 1px solid #ccc;
+
+    }
+</style>
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Heart Disease Predictor</title>
+
+</head>
+
+
+    
+    <form action= {{ url_for("predict")}} method="POST">
+    <fieldset>
+        <legend>Input values:</legend>
+  <p></p><label for="Smoking">Smoking:</label>
+  <input type="number" placeholder="Smoking" name="Smoking"><br><br>
+
+  <label for="Stroke">Stroke:</label>
+  <input type="number" placeholder="Stroke" name="Stroke"><br><br>
+
+  <label for="PhysicalHealth">PhysicalHealth:</label>
+  <input type="number" placeholder="PhysicalHealth"name="PhysicalHealth"><br><br>
+
+  <label for="MentalHealth">MentalHealth:</label>
+  <input type="number" placeholder="MentalHealth"name="MentalHealth"><br><br>
+
+  <label for="DiffWalking"> DiffWalking:</label>
+  <input type="number" placeholder="DiffWalking"name="DiffWalking"><br><br>
+
+   <label for="Sex"> Sex:</label>
+  <input type="number" placeholder="Sex"name="Sex"><br><br>
+
+
+   <label for="AgeCategory"> AgeCategory:</label>
+  <input type="number" placeholder="AgeCategory"name="AgeCategory"><br><br>
+
+   <label for="Diabetic"> Diabetic:</label>
+  <input type="number" placeholder="Diabetic"name="Diabetic"><br><br>
+
+
+   <label for="GenHealth"> GenHealth:</label>
+  <input type="number" placeholder="GenHealth"name="GenHealth"><br><br>
+
+
+   <label for="SleepTime"> SleepTime:</label>
+  <input type="number" placeholder="SleepTime"name="SleepTime"><br><br>
+
+
+   <label for="KidneyDisease"> KidneyDisease:</label>
+  <input type="number" placeholder="KidneyDisease"name="KidneyDisease"><br><br>
+
+
+   <label for="SkinCancer"> SkinCancer:</label>
+  <input type="number" placeholder="SkinCancer"name="SkinCancer"><br><br>
+
+ <input type="submit" value="submit"> 
+</fieldset>
+</form>
+
+<br>
+
+<div class="result" align="center">
+   
+           <p style="font-size:50px">{{ result }}</p>
+    
+</div>
+
+
+
+
+</html>
